@@ -1,0 +1,17 @@
+
+<div class='container-fluid'>
+	<nav class='navbar navbar-default'>
+		<div class='collapse navbar-collapse'>
+			<ul class='nav navbar-nav'>
+				<li class='dropdown' dropdown ng-repeat='topLevelMenuitem in topLevelMenuitems'>
+					<a role='button' class='dropdown-toggle' dropdown-toggle>{{topLevelMenuitem}}</a>
+					<ul class='dropdown-menu' dropdown-menu>
+						<li class='secondMenuitem' ng-repeat='menuitem in getMenuitemsByMenuName(topLevelMenuitem)'>
+							<a href='#' ng-click='onMenuitemClicked(menuitem)'>{{menuitem}}</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>

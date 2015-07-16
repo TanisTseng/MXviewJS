@@ -1,0 +1,55 @@
+{
+  "name": "mxviewjs",
+  "version": "0.1.0",
+  "description": "A Web-based MXview client",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/TanisTseng/MXviewJS.git"
+    },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular-bootstrap": "^0.12.0",
+    "angular-mocks": "^1.3.16",
+    "bootstrap": "^3.3.5",
+    "browserify": "^10.2.4",
+    "browserify-shim": "^3.8.9",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.8.0",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-karma": "^0.11.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.37",
+    "karma-bro": "^0.11.1",
+    "karma-browserify": "^4.2.1",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.5",
+    "karma-ng-html2js-preprocessor": "^0.1.2"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
+  },
+  "browser": {
+    "angular": "./node_modules/angular/angular.js",
+    "angular-mocks": "./node_modules/angular-mocks/angular-mocks.js",
+    "angular-bootstrap": "./node_modules/angular-bootstrap/dist/ui-bootstrap-tpls-0.13.0.min.js",
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "bootstrap": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    }
+  }
+}
